@@ -7,6 +7,92 @@
     <title>List</title>
 </head>
 <body>
-    
+    <!-- Seperti namanya, unordered list merupakan daftar yang tidak mementingkan urutan. Standarnya, unordered list menampilkan bullet pada tiap item list-nya (tetapi kita bisa mengubahnya dengan styling). -->
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3 
+            <!-- Kita juga bisa menyimpan kembali elemen <ul> untuk membuat sebuah nested list. -->
+            <ul>
+                <li>List item 3.1</li>
+                <li>List item 3.2</li>
+                <li>List item 3.3</li>
+            </ul>
+        </li>
+        <li>List item 4</li>
+    </ul>
+    <!-- Ordered list digunakan untuk membuat list yang mementingkan urutan. -->
+    <!-- Secara default urutan list menggunakan angka -->
+    <ol>
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah seterusnya</li>
+    </ol>
+    <!-- 
+        1
+
+        Menggunakan angka dalam urutan item (default)
+
+        a
+
+        Menggunakan huruf kecil dalam urutan item
+
+        A
+
+        Menggunakan huruf besar dalam urutan item
+
+        i
+
+        Menggunakan huruf romawi kecil dalam urutan item
+
+        I
+
+        Menggunakan huruf romawi besar dalam urutan item 
+    -->
+    <ol type="1">
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah seterusnya</li>
+    </ol>
+    <!-- Selain tipe angka pada urutan, kita juga bisa menetapkan nilai awal pada sebuah ordered list dengan menggunakan atribut start -->
+    <ol start="7">
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah seterusnya</li>
+    </ol>
+    <!-- Normalnya urutan list diawali dengan urutan paling rendah dengan menambahkan atribut reversed pada elemen <ol> , urutan dalam sebuah list akan dibalik -->
+    <ol start="7" reversed>
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah seterusnya</li>
+    </ol>
+    <ol type="a">
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah seterusnya</li>
+    </ol>
+    <ol type="A">
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah seterusnya</li>
+    </ol>
+    <ol type="i">
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah seterusnya</li>
+    </ol>
+    <ol type="I">
+        <li>Langkah pertama</li>
+        <li>Langkah kedua</li>
+        <li>Langkah ketiga</li>
+        <li>Langkah seterusnya</li>
+    </ol>
 </body>
 </html>
