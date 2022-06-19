@@ -1,0 +1,36 @@
+/*
+Inheritance Styling HTML bersifat inheritance yang artinya dapat mewarisi properti 
+style “tertentu” pada elemen yang ada di dalamnya. Contohnya pada rules yang kita 
+tuliskan untuk elemen <body>akan diterapkan pada seluruh elemen yang ada di dalam 
+elemennya (body). Contoh lainnya, pada rules yang diterapkan pada elemen <footer>
+dengan properti color yang bernilai white, akan diterapkan pada seluruh elemen yang 
+ada di dalam <footer>. Hal ini menjadi alasan mengapa memahami struktur dokumen itu penting.
+*/
+
+/* 
+Jika kita menerapkan rule yang sama pada beberapa selector yang berbeda,
+di CSS kita dapat menggabungkan selector tersebut sehingga dapat 
+meminimalisir penulisan kode yang berulang.
+*/
+
+/* 
+Rules
+Sesuai dengan namanya,
+cascading artinya “mengalir.” Demikian halnya dengan alur kerja CSS dalam 
+membaca kode yang mengalir dari atas ke bawah. Karena itu kita harus 
+memperhatikan urutan dalam penulisan rules, terutama saat terjadi sebuah konflik.
+*/
+
+body {
+    font-family: sans-serif;
+}
+
+h2, h3{
+    color: #00a2c6;
+}
+
+footer{
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+}
