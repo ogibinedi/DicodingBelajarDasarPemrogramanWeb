@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanning Cell</title>
+</head>
+<body>
+    <!-- Pada HTML hal ini lebih dikenal sebagai Spanning cell yang artinya menjangkau 
+        atau merentangkan sebuah ukuran sel lebih dari ukuran yang biasanya. 
+        Dengan spanning cell kita dapat membuat sebuah tabel yang lebih kompleks, 
+        tetapi akan membuat markup yang kita tulis menjadi sedikit sulit dibaca. -->
+    <!-- Column Spans -->
+    <!-- Untuk merentangkan sebuah kolom (column spanning) kita bisa menggunakan 
+        atribut colspan pada elemen <td> atau <th> -->
+            <h2>Contoh Column Spans</h2>
+            <table border="1">
+                <tr>
+                    <th>18:00</th>
+                    <th>19:00</th>
+                    <th>20:00</th>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color: yellow;">Avenger Infinity Wars</td>
+                    <td>It Chapter 2</td>
+                </tr>
+                <tr>
+                    <td>One Piece : Stampede</td>
+                    <td>Weathering With You</td>
+                    <td>Gundala</td>
+                </tr>
+                <tr>
+                    <td>Gundala</td>
+                    <td colspan="2" style="background-color: yellow;">Avenger Infinity Wars</td>
+                </tr>
+            </table>
+    <!-- Row Spans -->
+    <!-- Untuk merentangkan sebuah baris (row spanning) kita dapat menggunakan atribut rowspan. 
+        Sama seperti column spanning, tetapi atribut ini akan merentangkan sebuah sel ke bawah. -->
+    <h2>Contoh Row Spans</h2>
+    <table border="1">
+        <tr>
+            <th rowspan="3" style="background-color: red;">18:00</th>
+            <td>Avenger Infinity Wars</td>
+        </tr>
+        <tr>
+            <td>One Piece: Stampede</td>
+        </tr>
+        <tr>
+            <td>Gundala</td>
+        </tr>
+    </table>
+</body>
+</html>
