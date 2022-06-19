@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Lebih Dalam Selector</title>
+    <style>
+        /* 
+            Macam-macam basic selector
+            - Type Selector
+            - Class Selector
+            - ID Selector
+            - Attribute Selector
+            - Universal Selector
+        */
+        /* Contoh Type Selector Menggunakan elemen sebagai target untuk diterapkannya rule css */
+        /* Semua elemen span */
+        span{
+            color: red;
+        }
+        /* 
+        Class selector menetapkan target elemen berdasarkan nilai dari atribut class 
+        yang diterapkan pada elemennya. Untuk penulisan selector, awali dengan tanda 
+        titik (.) kemudian lanjutkan dengan nama class-nya.
+        */
+        /* Class bersifat shareable, sehingga dapat diterapkan pada banyak elemen 
+        dengan tipe elemen yang berbeda-beda. Contoh elemen paragraf(p) dan heading(h)
+        */
+        /* Contoh Class Selector */
+        .red {
+            color: red;
+        }
+        .skyblue-bg {
+            background-color: skyblue;
+        }
+        .fancy {
+            font-weight: bold;
+            text-shadow: 4px 4px  3px #77f;
+        }
+        /* 
+            ID selector menetapkan target elemen berdasarkan nilai dari atribut 
+            id yang diterapkan pada elemennya. Sama seperti class, atribut id 
+            dapat diterapkan pada seluruh elemen HTML, dan kebanyakan atribut 
+            ini digunakan untuk memberikan sebuah arti pada generic element 
+            seperti <div> dan <span>. Namun atribut id ini tidak bersifat shareable, 
+            yang artinya nilai id ini harus unik dan digunakan pada satu elemen saja.
+
+            Untuk menetapkan selector dengan menggunakan id, kita gunakan tanda 
+            octothorpe (#) atau lebih familiar disebut dengan hash
+        */
+        /* Contoh ID Selector */
+        #special {
+            background-color: blueviolet;
+        }
+
+        /* 
+            Attribute selector merupakan cara menetapkan target elemen berdasarkan 
+            sebuah atribut yang digunakan atau bahkan bisa lebih spesifik dengan 
+            nilainya.
+        */
+        /* Contoh Attribute Selector */
+        /* <a> element yang menerapkan href attribut */
+       a[href] {
+           color: blue;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href dengan awalan "#" */
+       a[href^="#"] {
+           background-color: gold;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+       a[href*="example"] {
+           background-color: silver;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive" tidak mementingkan huruf kapital*/
+       a[href*="insensitive" i] {
+           color: cyan;
+       }
+ 
+       /* <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+       a[href$=".org"] {
+           color: red;
+       }
+    </style>
+</head>
+<body>
+    <!-- Penggunaan Type Selector -->
+    <span>Ini merupakan sebuah teks yang berada pada elemen span. Seharusnya elemen ini ditampilkan dengan warna teks
+        merah.</span>
+    <p>Ini merupakan sebuah teks yang berada pada elemen paragraf, teks ini tidak seharusnya tidak akan terpengaruh oleh
+        rule.</p>
+    <span>Ini merupakan sebuah teks yang berada pada elemen span lainnya. Seharusnya elemen ini ditampilkan dengan warna
+        teks merah juga.</span>
+
+    <!-- Penggunaan Class Selector -->
+    <p class="red">Paragraf dengan teks berwarna merah</p>
+    <p class="skyblue-bg">Paragraf dengan background berwarna biru langit</p>
+    <p class="fancy">Paragraf dengan gaya fancy</p>
+    <p>Paragraf yang menampilkan teks dengan warna standar tanpa menerapkan styling</p>
+
+    <!-- Penggunaan ID Selector -->
+    <div id="special">
+        <p>Ini merupakan konten di dalam sebuah div yang diberi id special.</p>
+    </div>
+
+    <!-- Penggunaan Attribute Selector -->
+    <ul>
+        <ul>
+            <li><a href="#internal">Internal link</a></li>
+            <li><a href="http://example.com">Example link</a></li>
+            <li><a href="#InSensitive">Insensitive internal link</a></li>
+            <li><a href="http://example.org">Example org link</a></li>
+        </ul>
+    </ul>
+</body>
+</html>
