@@ -4,7 +4,7 @@ Selain beberapa selector yang sudah kita pelajari, CSS masih memiliki dua select
 
 Sebelum menjelaskan lebih detail tentang kedua selector tersebut, perlu kita ketahui *pseudo selector* berbeda dari selector yang sudah dibahas sebelumnya, selector ini menargetkan elemen pada bagian yang “tidak terlihat” seperti sifat pada elemen, sehingga untuk menetapkannya, kita tidak bisa menggunakan selector biasa. Salah satu contoh yang paling sering kita terapkan adalah `:hover`, Pseudo Selector tersebut kita gunakan untuk menetapkan rule ketika cursor diarahkan ke target elemen.
 
-```
+```css
 a:hover {
     color: blue;
 }
@@ -16,7 +16,7 @@ Pseudo-class merupakan sebuah class “semu” yang sebenarnya ada pada tiap ele
 
 Untuk menggunakan pseudo-class kita gunakan tanda titik dua (:) pada basic selector kemudian diikuti dengan pseudo-class nya. Berikut contoh penerapan beberapa pseudo-class pada sebuah elemen anchor:
 
-```
+```css
 /* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
 a:link {
    color: red;
@@ -46,7 +46,7 @@ Tidak hanya yang dicontohkan di atas, ada banyak sekali class semu yang menjadi 
 ### Pseudo-elemen Selector
 Sama seperti *pseudo-class*, pseudo-elemen merupakan sebuah elemen “semu” yang sebenarnya ada tetapi tidak tampak secara tertulis pada berkas HTML. Selector ini biasa digunakan ketika kita ingin menambahkan sebuah konten tepat sebelum dan setelah sebuah elemen paragraf. Alhasil kita tidak perlu menuliskan struktur elemen tersebut pada berkas HTML. Cukup manfaatkan pseudo-elemen `::before` dan `::after` kemudian tuliskan konten tersebut cukup pada CSS. Contohnya kita ingin menambahkan tanda kutip sebelum dan sesudah elemen *blockquote*. Seperti ini cara menuliskannya:
 
-```
+```css
 blockquote::before,
 blockquote::after {
    content: '"';
@@ -58,14 +58,14 @@ blockquote::after {
 ```
 Dengan menuliskan rule tersebut, elemen `<blockquote>` memiliki tanda kutip pada awal dan akhir elemennya.
 
-```
+```html
 <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia praesentium quas recusandae rem.</blockquote>
 ```
 
 Untuk menggunakan pseudo-elemen kita gunakan dua buah tanda titik dua (::) kemudian diikuti dengan pseudo-elemen nya. Sebenarnya kita bisa menggunakan satu buah tanda tanda titik dua (:) namun kita perlu membedakannya dengan pseudo-class. Karena itulah baiknya ketika menggunakan pseudo-elemen, gunakanlah dua buah titik dua (::).
 
 Pseudo-element tidak hanya *::before* dan *::after*. Dengan pseudo-elemen kita juga dapat menentukan rule pada awal karakter konten elemen.
-```
+```html
 <!doctype html>
 <html lang="en">
 <head>
