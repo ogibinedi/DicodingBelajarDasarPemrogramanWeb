@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendant Selector (space)</title>
+    <style>
+        /* 
+            Descendant Selector mirip seperti child selector namun hierarkinya lebih luas, 
+            karena rule akan diterapkan pada seluruh elemen yang menjadi turunannya walaupun 
+            secara tidak langsung. Basic selector pertama yang dituliskan pada selector 
+            ini menjadi induknya dan basic selector yang kedua merupakan elemen yang akan 
+            menerapkan rule. Selector ini menggunakan spasi dalam menggabungkan dua basic 
+            selector.
+        */
+        div p {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Rule akan diterapkan pada seluruh elemen paragraf yang merupakan turunan dari elemen div.
+     -->
+     <div>
+         <p>Paragraf pertama dalam div</p>
+         <p>Paragraf kedua dalam div</p>
+         <section><p>Paragraf ketiga. di dalam div walaupun bukan sebagai anak elemen secara langsung, namun termasuk dalam turunannya.</p></section>
+         <p>Paragraf keempat dalam div</p>
+     </div>
+     <p>Paragraf kelima diluar div</p>
+     <p>Paragraf keenam diluar div</p>
+</body>
+</html>

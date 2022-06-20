@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjacent Sibling Selector</title>
+    <style>
+        /* 
+            Adjacent Sibling Selector menggabungkan dua buah basic selector dengan 
+            menggunakan tanda + di antara keduanya.
+        */
+        img + p {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Adjacent Sibling Selector terdiri dari dua buah target elemen, namun hanya 
+        elemen kedua yang menerapkan rule selama elemen tersebut dituliskan langsung 
+        setelah elemen pertama pada berkas HTML.
+     -->
+    <p>Ini merupakan paragraf pertama. Rule styling tidak akan berpengaruh</p>
+    <img src="https://i.imgur.com/cs2BJzw.jpg" alt="Dicoding Logo" width="400">
+    <p>Ini merupakan paragraf kedua. Rule styling berpengaruh setelah elemen gambar</p>
+    <p>Ini merupakan paragraf ketiga. Rule styling tidak akan diterapkan karena terletak tidak berdampingan dengan elemen gambar</p>
+</body>
+</html>
