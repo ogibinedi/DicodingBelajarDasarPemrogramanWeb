@@ -1,0 +1,91 @@
+## Pseudo Selector
+---
+Selain beberapa selector yang sudah kita pelajari, CSS masih memiliki dua selector lagi yang dapat kita manfaatkan membantu menyeleksi elemen dalam menerapkan sebuah *rule*, yakni *Pseudo-class* dan *Pseudo-element*.
+
+Sebelum menjelaskan lebih detail tentang kedua selector tersebut, perlu kita ketahui *pseudo selector* berbeda dari selector yang sudah dibahas sebelumnya, selector ini menargetkan elemen pada bagian yang “tidak terlihat” seperti sifat pada elemen, sehingga untuk menetapkannya, kita tidak bisa menggunakan selector biasa. Salah satu contoh yang paling sering kita terapkan adalah `:hover`, Pseudo Selector tersebut kita gunakan untuk menetapkan rule ketika cursor diarahkan ke target elemen.
+
+```
+a:hover {
+    color: blue;
+}
+```
+Contoh kode di atas merupakan salah satu pseudo-class selector dimana elemen anchor akan menerapkan warna biru ketika kursor diarahkan pada elemen tersebut.
+
+### Pseudo-class Selector
+Pseudo-class merupakan sebuah class “semu” yang sebenarnya ada pada tiap elemen HTML. Pada contoh sebelumnya kita sudah mengetahui salah satu pseudo-class selector, dengan menggunakan selector ini kita dapat memilih elemen berdasarkan class yang tidak nampak pada dokumen. Kita bisa menetapkan rule hanya ketika sebuah tautan telah dikunjungi (`:visited`) atau ketika sebuah elemen diarahkan dengan kursor (`:hover`).
+
+Untuk menggunakan pseudo-class kita gunakan tanda titik dua (:) pada basic selector kemudian diikuti dengan pseudo-class nya. Berikut contoh penerapan beberapa pseudo-class pada sebuah elemen anchor:
+
+```
+/* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
+a:link {
+   color: red;
+}
+ 
+/* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
+a:visited {
+   color: green;
+}
+ 
+/* rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor */
+a:hover {
+   color: pink;
+}
+ 
+/* rule akan diterapkan pada sebuah tautan ketika ditekan */
+a:active {
+   color:orange;
+}
+
+```
+
+Tidak hanya yang dicontohkan di atas, ada banyak sekali class semu yang menjadi standar pseudo-classes dalam CSS. Kita pun bisa melihat indeks standar yang ada pada pseudo-class pada tautan resmi Mozilla berikut:
+
+[Pseudo-Classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+
+### Pseudo-elemen Selector
+Sama seperti *pseudo-class*, pseudo-elemen merupakan sebuah elemen “semu” yang sebenarnya ada tetapi tidak tampak secara tertulis pada berkas HTML. Selector ini biasa digunakan ketika kita ingin menambahkan sebuah konten tepat sebelum dan setelah sebuah elemen paragraf. Alhasil kita tidak perlu menuliskan struktur elemen tersebut pada berkas HTML. Cukup manfaatkan pseudo-elemen `::before` dan `::after` kemudian tuliskan konten tersebut cukup pada CSS. Contohnya kita ingin menambahkan tanda kutip sebelum dan sesudah elemen *blockquote*. Seperti ini cara menuliskannya:
+
+```
+blockquote::before,
+blockquote::after {
+   content: '"';
+   font-size: 24px;
+   font-style: italic;
+   font-weight: bold;
+}
+
+```
+Dengan menuliskan rule tersebut, elemen `<blockquote>` memiliki tanda kutip pada awal dan akhir elemennya.
+
+```
+<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia praesentium quas recusandae rem.</blockquote>
+```
+
+Untuk menggunakan pseudo-elemen kita gunakan dua buah tanda titik dua (::) kemudian diikuti dengan pseudo-elemen nya. Sebenarnya kita bisa menggunakan satu buah tanda tanda titik dua (:) namun kita perlu membedakannya dengan pseudo-class. Karena itulah baiknya ketika menggunakan pseudo-elemen, gunakanlah dua buah titik dua (::).
+
+Pseudo-element tidak hanya *::before* dan *::after*. Dengan pseudo-elemen kita juga dapat menentukan rule pada awal karakter konten elemen.
+```
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Judul Dokumen</title>
+   <style>
+       /* Rule styling akan diterapkan pada karakter pertama disebuah paragraf */
+       p::first-letter {
+           font-size: 32px;
+           font-weight: bold;
+           color: saddlebrown;
+       }
+   </style>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deserunt, dicta laudantium quae quam sequi
+   soluta vitae! A, architecto beatae, consequuntur et eveniet fuga laudantium molestias praesentium temporibus, unde
+   velit.</p>
+</body>
+</html>
+```
+
+Untuk mengetahui lebih lengkap mengenai apa saja pseudo-element yang dapat kita manfaatkan, kita bisa melihat dokumentasi resmi yang diberikan Mozilla pada tautan berikut: [Pseudo-elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
