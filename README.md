@@ -3,4 +3,6 @@
 
 Belajar dasar pemograman website
 
-Semua konten yang ada dalam kumpulan atau modul latihan ini adalah hak cipta dari Dicoding Academy. [^1]
+Semua konten yang ada dalam kumpulan atau modul latihan ini adalah hak cipta dari Dicoding Academy.
+
+&copy; 2019 Dicoding Academy
