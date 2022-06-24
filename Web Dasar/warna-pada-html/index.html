@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menetukan Warna</title>
+    <style>
+        div#opacity {
+            background-color: red;
+            opacity: 0.5;
+        }
+
+        div#opacity2 {
+            background-color: red;
+            opacity: 1;
+        }
+
+        div#rgba {
+            background-color: rgba(78,231,23, 0.5);
+            margin-bottom: 10px;
+        }
+
+        div#hsla {
+            background-color: hsla(104, 82%, 50%, 0.5);
+            margin-bottom: 10px;
+        }
+
+        div#hex {
+            background-color: #4fe71774; /*74 merupakan digit tambahan untuk menerapkan opacity*/
+        }
+    </style>
+</head>
+<body>
+    <p>Opacity 50%</p>
+    <div id="opacity">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quod quas eius eveniet dignissimos nesciunt incidunt vel numquam ab repellat? Quod delectus quam soluta voluptas illum dolor, obcaecati eos voluptatum.
+        </p>
+    </div>
+    <p>Opacity 100% tidak ditetapkan</p>
+    <div id="opacity2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, fuga. Culpa id, ipsam eveniet atque porro debitis maxime vero assumenda odio esse ex, eum, laudantium corrupti corporis accusamus temporibus expedita!</p>
+    </div>
+    <p>Opacity dengan menerapkan <strong>rgba</strong>, <strong>hsla</strong> dan <strong>hex</strong></p>
+    <div id="rgba">RGBA, Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate vitae recusandae assumenda. Sed sint iure nisi, placeat sapiente et non atque. Neque consectetur explicabo maxime non inventore libero, laborum voluptatibus!</div>
+    <div id="hsla">HSLA, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim voluptas fuga sed quaerat omnis mollitia voluptatum eligendi placeat temporibus exercitationem, explicabo necessitatibus esse quam dolorem. Minima voluptates libero suscipit obcaecati.</div>
+    <div id="hex">HEX, Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi impedit nemo tenetur itaque quis perferendis atque illum similique blanditiis, sequi pariatur asperiores eaque, enim placeat et necessitatibus numquam dolorum. Blanditiis.</div>
+</body>
+</html>
