@@ -1,0 +1,18 @@
+/* Penggunaan eksternal font menggunakan google font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+body {
+    font-family: 'Quicksand',
+    sans-serif;
+    /* tambahkan jenis font baru dibawah ini dengan nama "Quicksand" */
+}
+
+h2, h3{
+    color: #00a2c6;
+}
+
+footer{
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+}
