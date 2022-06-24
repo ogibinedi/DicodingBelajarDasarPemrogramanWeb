@@ -45,7 +45,7 @@ Kita bisa menetapkan tipe border dengan menggunakan properti border-style. Berik
 | groove | Tipe garis yang berbentuk seperti frame |
 | hidden | Digunakan untuk menyembunyikan garis pada elemen. |
 
-Untuk lebih jelas mengenai macam-macam CSS Border Style bisa di klik tautan berikut ini : ![CSS Border Style](https://www.w3schools.com/css/css_border.asp)
+Untuk lebih jelas mengenai macam-macam CSS Border Style bisa di klik tautan berikut ini : [CSS Border Style](https://www.w3schools.com/css/css_border.asp)
 
 Kita juga bisa menetapkan tipe garis secara individual pada sisi elemen dengan menggunakan empat properti terpisah. Contohnya seperti ini:
 
