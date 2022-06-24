@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflowing Content</title>
+    <style>
+        div#visible {
+            display: inline-block;
+            height: 200px;
+            width: 200px;
+            overflow: visible;
+            background-color: lightgreen;
+        }
+        div#hidden {
+            display: inline-block;
+            margin-top: 20px;
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+            background-color: lightgreen;
+        }
+        div#scroll {
+            display: inline-block;
+            margin-top: 20px;
+            height: 200px;
+            width: 200px;
+            overflow: scroll;
+            background-color: lightgreen;
+        }
+        div#auto {
+            display: inline-block;
+            margin-top: 20px;
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="visible">
+        <p><mark>Visible</mark> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+    </div>
+    <div id="hidden">
+        <p><mark>Hidden</mark> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+    </div>
+    <div id="scroll">
+        <p><mark>Scroll</mark> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+    </div>
+    <div id="auto">
+        <p><mark>Auto</mark> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+    </div>
+    <div id="auto">
+        <p><mark>Auto</mark> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore
+            harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+    </div>
+    <div id="auto">
+        <p><mark>Auto</mark> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore
+            harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis labore repudiandae dolore harum eum,
+            praesentium deserunt, nostrum iste adipisci ipsa blanditiis inventore beatae omnis delectus provident
+            quaerat facilis unde sapiente.</p>
+    </div>
+</body>
+
+</html>
