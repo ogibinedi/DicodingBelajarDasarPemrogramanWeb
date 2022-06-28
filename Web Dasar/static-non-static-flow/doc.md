@@ -99,7 +99,27 @@ Untuk mengubah posisi elemen yang berada di *non-static flow*, kita dapat menggu
 
 ![Ilustrasi 4](sc/image4.png)
 
->Note: properti `top`, `left`, `right`, dan `bottom` pada CSS hanya akan berpengaruh pada elemen yang menerapkan non-static flow (elemen yang menerapkan nilai `relative`, `absolute`, dan `fixed` pada properti position).
+>Note: properti `top`, `left`, `right`, dan `bottom` pada CSS hanya akan berpengaruh pada elemen yang menerapkan non-static flow (elemen yang menerapkan nilai `relative`, `absolute`, dan `fixed` pada *properti position*).
+
+### Normal Flow
+
+Dalam flow normal, setiap elemen block ditempatkan di bawah elemen sebelumnya. Karena ini merupakan cara standar browser memperlakukan elemen HTML, kita tidak perlu menetapkan nilai properti position ketika ingin membuat perilaku seperti ini tetapi secara sintaks perilaku ini ditetapkan dengan nilai static.
+
+### Relative Flow
+
+Seperti yang kita ketahui sebelumnya, dengan menetapkan `relative` pada properti `position`, kita dapat melakukan perpindahan posisi elemen ke atas, kanan, bawah, maupun kiri. Perpindahan posisi yang dilakukan tidak akan berpengaruh terhadap posisi elemen di sekitarnya karena dengan  *relative positioning*, elemen tersebut akan dipindahkan dari normal flow.
+
+### Absolute Flow
+
+Ketika properti position diberikan nilai absolute, akan berperilaku sama dengan relative. Elemen akan dikeluarkan dari normal flow sehingga jika elemen dipindahkan posisinya tidak akan berpengaruh pada elemen lain di sekitarnya. 
+
+Namun yang membedakannya adalah elemen ini benar-benar tidak dianggap ada oleh elemen pada normal flow. Akibatnya, lokasi awal elemen yang diberikan nilai absolute akan ditempati oleh elemen di bawahnya.
+
+### Fixed Flow
+
+*Fixed positioning* merupakan *absolute position* namun posisinya selalu relatif pada jendela browser (meskipun diletakan di dalam induk elemen diluar dari *flow normal*). Bahkan ketika pengguna melakukan *scrolling* posisinya akan tetap nampak pada posisinya di layar.
+
+
 
 
 
