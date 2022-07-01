@@ -130,3 +130,11 @@ Cara kerja flex-grow mirip seperti potongan kue. Ruang kosong pada elemen akan d
 ### Flex Direction
 
 Seperti yang sudah kita ketahui sebelumnya, flexbox merupakan *directional agnostic*, di mana kita dapat mengubah arah munculnya flex-item yang berada di flex container. Secara default deretan flex-item ditampilkan secara **horizontal**, namun kita dapat mengubahnya dengan menetapkan properti **flex-direction** pada *flex container*-nya.
+
+Ada empat nilai yang bisa digunakan untuk properti **flex-direction**, antara lain:
+
+- **row** : merupakan nilai default, di mana deretan flex-item pada container ditampilkan secara horizontal.
+- **row-reverse** : memiliki sifat yang sama seperti row, namun urutan flex item-nya ditukar.
+- **column** : Deretan flex-item pada container ditampilkan secara vertikal.
+- **column-reverse** : memiliki sifat yang sama seperti column, namun urutan flex item-nya ditukar.
+
