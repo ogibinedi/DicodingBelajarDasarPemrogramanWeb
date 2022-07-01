@@ -65,3 +65,68 @@ Untuk membuat sebuah flex container kita gunakan properti **display** dengan nil
 </html>
 ```
 
+### Flex Grow
+
+Properti flex-grow ini digunakan untuk memberitahu berapa banyak ukuran yang harus ditetapkan oleh flex-item. **Nilai dari properti ini bukan nilai dari dimensi asli pada flex item, melainkan nilai yang relatif terhadap ruang kosong pada flex container.**
+
+Jika kita menetapkan nilai **flex-grow** yang sama pada seluruh flex item, maka dimensi dari tiap flex item akan sama rata dan memenuhi ruang kosong yang ada pada container. Namun jika kita memberikan nilai yang berbeda dari salah satu item-nya, contohnya nilai yang lebih besar, maka flex item tersebut akan mencakup ukuran yang lebih besar. Flex item yang lain akan menyusut menyesuaikan agar tetap masuk pada ruang flex container.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow</title>
+    <style>
+        .container {
+            display: flex;
+
+            /* properti lainnya */
+            width: 800px;
+            height: 250px;
+            background-color: #11C5C6;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .box {
+            background-color: #FBDD1C;
+            margin: 5px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .fisrt {
+            flex-grow: 1;
+        }
+
+        .second {
+            flex-grow: 2;
+        }
+
+        .third {
+            flex-grow: 1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box first"></div>
+        <div class="box second"></div>
+        <div class="box third"></div>
+    </div>
+</body>
+</html>
+```
+
+Cara kerja flex-grow mirip seperti potongan kue. Ruang kosong pada elemen akan dibagi-bagi sesuai besaran nilainya. Contoh di atas memberi kita gambaran seperti sebuah kue dengan luas total 4, kemudian kue tersebut dipotong menjadi 3 potong. Potongan yang tengah mendapatkan 2 bagian dan potongan yang lainnya masing - masing mendapatkan 1 bagian. Maka potongan yang tengah akan lebih besar dari potongan yang lain.
+
+### Flex Direction
+
+Seperti yang sudah kita ketahui sebelumnya, flexbox merupakan *directional agnostic*, di mana kita dapat mengubah arah munculnya flex-item yang berada di flex container. Secara default deretan flex-item ditampilkan secara **horizontal**, namun kita dapat mengubahnya dengan menetapkan properti **flex-direction** pada *flex container*-nya.

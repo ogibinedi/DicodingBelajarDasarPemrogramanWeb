@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex Container</title>
+    <title>Flex Grow</title>
     <style>
         .container {
             display: flex;
@@ -20,31 +21,44 @@
         }
 
         .box {
-            flex-grow: 1;
-
-            /* properti lainnya */
             background-color: #FBDD1C;
             margin: 5px;
             border: 2px solid black;
             border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
         }
+
+        .first {
+            flex-grow: 1;
+        }
+
+        .second {
+            flex-grow: 2;
+        }
+
+        .third {
+            flex-grow: 1;
+        }
+
     </style>
 </head>
+
 <body>
     <div class="container">
-        <!-- Flex Container -->
-        <div class="box">
-            <!-- Flex Item -->
-            <p style="font-size: 18px; text-align:center;">Flex item</p>
+        <div class="box first">
+            <div class="tengah">Flex Grow 1</div>
         </div>
-        <div class="box">
-            <!-- Flex Item -->
-            <p style="font-size: 18px; text-align:center;">Flex item</p>
+        <div class="box second">
+            <div class="tengah">Flex Grow 2</div>
         </div>
-        <div class="box">
-            <!-- Flex Item -->
-            <p style="font-size: 18px; text-align:center;">Flex item</p>
+        <div class="box third">
+            <div class="tengah">Flex Grow 1</div>
         </div>
     </div>
-    
+</body>
+
 </html>
