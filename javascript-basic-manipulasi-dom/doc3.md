@@ -78,6 +78,7 @@ Nama: Harry Potter
 Jenis Sihir: Magic Wind
 Burung Kesayangan
 */
+```
 
 Banyak hal sebenarnya yang dapat diceritakan tentang dua hal ini, terutama untuk objek. Jika Kita ingin tahu lebih dalam, Kita bisa baca dokumentasinya pada tautan yang disediakan oleh MDN:
 
