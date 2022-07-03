@@ -70,3 +70,101 @@ Sebuah *script* dibangun dari serangkaian *statement*. *Statement* merupakan seb
 alert("Terimakasih");
 ```
 
+### Komentar
+
+Pada JavaScript juga terdapat fitur komentar. Seluruh teks yang dituliskan pada tanda komentar akan diabaikan (tidak dianggap ada) atau tidak akan dieksekusi. Dalam komentar ini kita bisa menuliskan teks untuk mengingatkan atau menjelaskan kode yang kita tuliskan. Hal ini bisa saja berguna jika kode yang kita tuliskan akan diubah oleh orang lain. Tapi ingat, jangan terlalu berupaya dalam menuliskan komentar yang sebenarnya tidak perlu dituliskan.
+
+Ada dua tipe komentar
+- Komentar diberikan satu baris `//`
+- Komentar diberikan multi baris `/**/`
+
+contoh komentar satu baris:
+
+```javascript
+// ini merupakan komentar satu baris komentar
+
+// alert("Terima kasih");
+```
+
+contoh komentar multi baris :
+
+```javascript
+/* Ini merupakan komentar dengan lebih dari satu baris
+Teks apapun yang berada disini akan dijadikan komentar.
+Ketika menggunakan ini, jangan lupa untuk menutupnya.
+*/
+```
+
+### Variable
+
+>**Note:**Sebaiknya hindari penamaan variabel dengan istilah umum seperti `“data”`, Gunakanlah penamaan variabel yang dapat mendeskripsikan nilai dari variabel itu sendiri
+
+Berikut beberapa aturan dalam penamaan variabel yang perlu Anda ketahui:
+
+- Harus dimulai dengan huruf atau underscore (_).
+- Dapat terdiri dari huruf, angka, dan underscore (_) dengan berbagai kombinasi.
+- Tidak dapat mengandung spasi (white space), jika penamaan variabel lebih dari dua kata maka tuliskan secara camelCase. Contoh firstName, lastName, catName, dll.
+- Tidak dapat mengandung karakter spesial (! . , / \ + * = dll.)
+
+Nilai variabel yang diinisialisasi menggunakan `var` dapat diubah kembali nilainya, contoh:
+
+```javascript
+var firstName = "John";
+console.log(firstName);
+
+firstName = "Jane";
+console.log(firstName);
+
+/* output:
+John
+Jane
+*/
+```
+
+Sejak ECMAScript 2015 (ES6) selain `var`, menginisialisasikan variabel dapat menggunakan `let` dan `const`. ES6 melakukan improvisasi pada deklarasi variabel karena menggunakan var terdapat beberapa hal yang kontroversial, salah satunya hoisting.
+
+Apa itu hoisting? sesuai artinya “Mengangkat” variabel yang dideklarasikan menggunakan var ini dapat diberikan nilai terlebih dahulu sebelum dideklarasikan, Contoh:
+
+```javascript
+x = 100;
+var x;
+console.log(x);
+
+// output : 100
+
+/*Ini dikarenakan proses hoisting, sebenarnya di belakang layar deklarasi variabel x diangkat ke atas sehingga kode yang tampak seperti ini:*/
+
+var x;
+x = 100;
+console.log(x);
+
+// output : 100
+```
+
+Hoisting menjadi kontroversial karena tidak sedikit developer yang dibuat bingung akan hal ini. Masalah ini sudah terselesaikan jika kita menggunakan `let` dalam mendeklarasikan variabel.
+
+```javascript
+y = 100;
+let y;
+console.log(y);
+
+/* ReferenceError: Cannot access 'y' before initialization */
+
+let y = 100;
+console.log(y);
+
+// output: 100
+```
+
+Kemudian **`const`** digunakan untuk mendeklarasikan sebuah variabel yang sifatnya immutable atau tidak perlu diubah nilainya. Jika kita menginisialisasi kembali nilai variabel yang menggunakan `const`, maka akan mendapati eror “TypeError: Assignment to constant variable.”
+
+```javascript
+const z = 100;
+console.log(z);
+
+z = 200;
+console.log(z)
+
+/* TypeError: Assignment to constant variable. */
+```
+
