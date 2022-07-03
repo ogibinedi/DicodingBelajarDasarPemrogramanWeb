@@ -58,7 +58,7 @@ Pada JavaScript terdapat tiga buah karakter khusus yang berfungsi sebagai *logic
 | Operator | Deskripsi |
 | -------- | --------- |
 | && | Operator dan *(and)*, logika akan menghasilkan **true apabila semua kondisi terpenuhi** (bernilai true). |
-| **||** | Operator atau *(or)*, logika akan menghasilkan **true apabila ada salah satu kondisi terpenuhi** (bernilai true). |
+|  | Operator atau *(or)*, logika akan menghasilkan **true apabila ada salah satu kondisi terpenuhi** (bernilai true). |
 | ! | Operator tidak (not), digunakan untuk membalikan suatu kondisi. |
 
 Contoh :
